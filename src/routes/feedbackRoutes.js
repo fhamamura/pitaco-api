@@ -135,8 +135,8 @@ router.post("/pitaco", autenticar, async (req, res) => {
 			return res.status(404).json({ mensagem: "Aula não encontrada!" });
 
 		// Analisar sentimento
-		//const sentimento = await analisarSentimento(comentario);
-		const sentimento = "positivo"; // Placeholder para análise de sentimento
+		const sentimento = await analisarSentimento(comentario);
+		//const sentimento = "positivo"; // Placeholder para análise de sentimento
 
 		const feedback = await Feedback.create({
 			classId,
