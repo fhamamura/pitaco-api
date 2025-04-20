@@ -2,7 +2,7 @@ const express = require("express");
 const Feedback = require("../models/Feedback");
 const Class = require("../models/Class");
 const autenticar = require("../middleware/authMiddleware");
-//const analisarSentimento = require("../services/sentimentAnalysis");
+const analisarSentimento = require("../services/sentimentAnalysis");
 
 const router = express.Router();
 
